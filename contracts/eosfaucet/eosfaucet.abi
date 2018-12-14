@@ -1,0 +1,45 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Fri Dec 14 05:40:44 2018",
+    "version": "eosio::abi/1.0",
+    "structs": [
+        {
+            "name": "get",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "limit",
+            "base": "",
+            "fields": [
+                {
+                    "name": "name",
+                    "type": "name"
+                }
+            ]
+        }
+    ],
+    "types": [],
+    "actions": [
+        {
+            "name": "get",
+            "type": "get",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "limit",
+            "type": "limit",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "abi_extensions": []
+}

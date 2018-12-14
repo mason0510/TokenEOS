@@ -37,14 +37,13 @@ private:
     }
 
     TABLE limit {
-        uint64_t key;
+        
         name name;
-        uint64_t primary_key() const { return key; }
-          EOSLIB_SERIALIZE(members, (key)(name);
+        uint64_t primary_key() const { return name.value; }
     };
 
     typedef eosio::multi_index<"limit"_n, limit> limit_table;
     limit_table _limit_table;
 };
 
-EOSIO_DISPATCH(eosfaucet, (get))
+EOSIO_DISPATCH(eosfaucet, (get));
