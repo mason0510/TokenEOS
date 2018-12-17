@@ -18,7 +18,6 @@ public:
             //用户没在表里
             _limit_table.emplace(get_self(), [&](auto &row) {
                 row.name = user;
-               // row.time = now() + 60;
                 //给用户发送EOS
                 sendEOS(user);
             });
@@ -27,7 +26,7 @@ public:
 
 private:
     void sendEOS(name user) {
-        asset money = asset(10, EOS_SYMBOL);
+        asset money = asset(1000, EOS_SYMBOL);
         action(
                 permission_level{get_self(), "active"_n},
                 "eosio.token"_n,
@@ -37,7 +36,6 @@ private:
     }
 
     TABLE limit {
-        
         name name;
         uint64_t primary_key() const { return name.value; }
     };
